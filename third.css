@@ -197,6 +197,7 @@ html {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 18rem;
 }
 
 .no {
@@ -219,4 +220,28 @@ html {
     left: 138rem;
 
 
+}
+
+.back {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    border: solid black 0.1rem;
+    width: 6rem;
+    border-radius: 1.5rem;
+}
+
+.next {
+    display: flex;
+    gap: 1rem;
+    width: 10rem;
+    height: 3rem;
+    border: solid black 0.1rem;
+    background-color: #000000;
+}
+
+.nextBackBtn {
+    width: 74.3rem;
+    display: flex;
+    justify-content: space-between;
 }
