@@ -82,7 +82,7 @@ form.addEventListener('submit', function (e) {
 
 
 
-});
+    // });
 
 
 
@@ -90,19 +90,45 @@ form.addEventListener('submit', function (e) {
 
 
 
-// }
 
-// function myfunc(event) {
-//     event.preventDefault();
+    // }
 
-//     const usernamevalue = username.value.trim();
-//     const emailvalue = email.value.trim();
-//     const numbervalue = number.value.trim();
-//     const datevalue = date.value;
+    // function myfunc(event) {
+    //     event.preventDefault();
 
-//     localStorage.setItem('name', usernamevalue);
-//     localStorage.setItem('number', numbervalue);
-//     localStorage.setItem('email', emailvalue);
+    //     const usernamevalue = username.value.trim();
+    //     const emailvalue = email.value.trim();
+    //     const numbervalue = number.value.trim();
+    //     const datevalue = date.value;
+
+    //     localStorage.setItem('name', usernamevalue);
+    //     localStorage.setItem('number', numbervalue);
+    //     localStorage.setItem('email', emailvalue);
+
+    async function getResponse() {
+        let response = await fetch('https://jsonplaceholder.typicode.com/photos')
+        let content = await response.json()
+        content = content.splice(0, 5);
+
+        let list = document.querySelector('.post');
+
+
+        let key;
+
+        for (key in content) {
+
+            list.innerHTML += `    
+    <li class='post'>
+    <h4>${content[key].title}</h4 >
+            <img src='${content[key].url}' class='imgOfgamers'></img>
+</li > `
+
+            content[key]
+        }
+
+    }
+    getResponse();
+
 
 
 
