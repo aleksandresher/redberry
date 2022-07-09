@@ -5,6 +5,7 @@ const number = document.getElementById('phone');
 const date = document.getElementById('date');
 const close = document.querySelector('.close');
 const required = document.querySelector('.error');
+const showAccordion = document.querySelector('.accordeon');
 
 
 function checkInputs() {
@@ -13,6 +14,12 @@ function checkInputs() {
     const emailvalue = email.value.trim();
     const numbervalue = number.value.trim();
     const datevalue = date.value;
+
+    function setErrorFor(input) {
+        document.querySelector('.errorMessagename').style.visibility = "visible";
+        document.getElementById('name').style.backgroundColor = "#ffefef";
+
+    }
 
     if (usernamevalue === '') {
         //show error
@@ -30,11 +37,12 @@ function checkInputs() {
     }
 }
 
-function setErrorFor(input) {
-    document.querySelector('.errorMessagename').style.visibility = "visible";
-    document.getElementById('name').style.backgroundColor = "#ffefef";
+showAccordion.addEventListener('click', function () {
+    document.querySelector('.accordion').style.visibility = "visible";
+});
 
-}
+
+
 
 
 const usernamevalue = username.value.trim();
@@ -80,6 +88,8 @@ form.addEventListener('submit', function (e) {
 
 
 
+
+
 // }
 
 // function myfunc(event) {
@@ -96,27 +106,5 @@ form.addEventListener('submit', function (e) {
 
 
 
-// }
-
-// const forma = document.getElementById('form');
-
-// forma.addEventListener('submit', function (e) {
-//     e.preventDefault();
-
-//     const payload = new FormData(forma);
-
-//     console.log([...payload]);
-
-//     fetch("https://httpbin.org/post", {
-//         method: "POST",
-//         body: payload,
-
-//         headers: "accept: application/json"
-
-//     })
-//         .then(res => res.json())
-//         .then(data => console.log(data))
-//         .catch(err => console.log(err));
-// })
 
 
