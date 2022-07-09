@@ -346,3 +346,9 @@ html {
     width: 2rem;
     height: 2rem;
 }
+
+.suc {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
