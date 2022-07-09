@@ -40,11 +40,6 @@ function checkInputs() {
     }
 }
 
-showAccordion.addEventListener('click', finalfunction)
-
-function myfunction() {
-    document.querySelector('.accordion').style.visibility = "visible";
-}
 
 
 
@@ -93,47 +88,55 @@ form.addEventListener('submit', function (e) {
 
 
 
-// function myfunc(event) {
-//     event.preventDefault();
+function myfunc(event) {
+    event.preventDefault();
 
-//     const usernamevalue = username.value.trim();
-//     const emailvalue = email.value.trim();
-//     const numbervalue = number.value.trim();
-//     const datevalue = date.value;
+    const usernamevalue = username.value.trim();
+    const emailvalue = email.value.trim();
+    const numbervalue = number.value.trim();
+    const datevalue = date.value;
 
-//     localStorage.setItem('name', usernamevalue);
-//     localStorage.setItem('number', numbervalue);
-//     localStorage.setItem('email', emailvalue);
+    localStorage.setItem('name', usernamevalue);
+    localStorage.setItem('number', numbervalue);
+    localStorage.setItem('email', emailvalue);
 
-async function getResponse() {
-    let response = await fetch('https://jsonplaceholder.typicode.com/photos')
-    let content = await response.json()
-    content = content.splice(0, 5);
+    async function getResponse() {
+        let response = await fetch('https://jsonplaceholder.typicode.com/photos')
+        let content = await response.json()
+        content = content.splice(0, 5);
 
-    let list = document.querySelector('.post');
+        let list = document.querySelector('.post');
 
 
-    let key;
+        let key;
 
-    for (key in content) {
+        for (key in content) {
 
-        list.innerHTML += `    
+            list.innerHTML += `    
     <li class='post'>
     <h4>${content[key].title}</h4 >
             <img src='${content[key].url}' class='imgOfgamers'></img>
 </li > `
 
-        content[key]
+            content[key]
+        }
+
     }
 
-}
+    const btnacc2 = document.querySelector('.accordeon');
+    const level = document.querySelector('.accordion');
+
+    btnacc2.addEventListener('click', function () {
+        level.classList.toggle('hidden');
+    })
 
 
 
 
-const btnacc = document.querySelector('.accordeon2');
-const gamerso = document.querySelector('.gamers');
+    const btnacc = document.querySelector('.accordeon2');
+    const gamerso = document.querySelector('.gamers');
 
-btnacc.addEventListener('click', function () {
-    gamerso.classList.toggle('hidden');
-});
+    btnacc.addEventListener('click', function () {
+        gamerso.classList.toggle('hidden');
+        getResponse();
+    });

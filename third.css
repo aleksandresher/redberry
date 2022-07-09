@@ -253,7 +253,6 @@ html {
 }
 
 .accordion {
-    visibility: hidden;
     display: flex;
     gap: 1.5rem;
     position: absolute;
