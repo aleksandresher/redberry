@@ -166,6 +166,12 @@ html {
     height: 1rem;
 }
 
+.accordeon2 {
+    width: 1.2rem;
+    height: 1rem;
+}
+
+
 .medical1 {
     position: absolute;
     width: 0.8rem;
@@ -308,4 +314,12 @@ button.professional:hover {
 .imgOfgamers {
     width: 10rem;
     height: 7.2rem;
+}
+
+.hideelement {
+    display: none;
+}
+
+.hidden {
+    display: none;
 }
