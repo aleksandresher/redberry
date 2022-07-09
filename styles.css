@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+}
+
+.landing-page-container {
+    display: flex;
+    width: 192rem;
+    height: 108rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+    position: absolute;
+    width: 92.3rem;
+    height: 8.4rem;
+    background-color: #7025fb;
+
+}
+
+.content {
+    display: flex;
+    gap: 1rem;
+    margin-left: 8rem;
+    margin-top: 3rem;
+}
+
+.header1 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.chessImg {
+    width: 92.3rem;
+    height: 108rem;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    width: 99.7rem;
+    height: 108rem;
+    background-color: #fd5334;
+
+}
+
+.mainQuote {
+    font-size: 8rem;
+    position: relative;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 26.5rem;
+    margin-bottom: 1.6rem;
+    margin-left: 8.5rem;
+    margin-right: 20rem;
+}
+
+.mainQuoteSecondPart {
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-left: 8.5rem;
+}
+
+.mainQuoteThirdPart {
+    position: absolute;
+    color: #212529;
+    font-size: 2rem;
+    left: 153rem;
+    top: 30rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.startBtn {
+    display: flex;
+    position: absolute;
+    left: 101rem;
+    top: 60.1rem;
+    background-color: #212529;
+    border-radius: 1.5rem;
+    align-items: center;
+
+}
+
+.btnText {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    padding: 1.3rem 2rem 1.3rem 2.4rem;
+}
+
+.arrowBtn {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+
+}
+
+.headerImg {
+    width: 2rem;
+    height: 2rem;
+}
