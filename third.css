@@ -322,3 +322,65 @@ button.professional:hover {
 .hidden {
     display: none;
 }
+
+.nextBackBtn {
+
+    display: flex;
+    flex-direction: row;
+    gap: 56rem;
+    margin-top: 4rem;
+}
+
+.startBtn {
+    display: flex;
+    width: 12.8rem;
+    background-color: #212529;
+    border-radius: 0.8rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.startBtn2 {
+    display: flex;
+    width: 9.3rem;
+    height: 5.3rem;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    border: solid black 0.1rem;
+
+}
+
+.btnText2 {
+
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    height: 2.7rem;
+    margin-bottom: 1.3rem;
+    margin-top: 1.3rem;
+    text-transform: capitalize;
+
+}
+
+.btnText {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    height: 2.7rem;
+    margin-bottom: 1.3rem;
+    margin-top: 1.3rem;
+    text-transform: capitalize;
+
+}
+
+.arrowBtn {
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 2rem;
+    margin-top: 0.4rem;
+
+}
