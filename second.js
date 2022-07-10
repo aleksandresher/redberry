@@ -10,6 +10,8 @@ const showSecondAccordion = document.querySelector('.accordeon2')
 const showGamers = document.querySelector('.gamers');
 
 
+
+
 const btnacc2 = document.querySelector('.accordeon');
 const level = document.querySelector('.accordion');
 
@@ -49,7 +51,7 @@ function checkInputs() {
         setErrorFor(username);
     } else if (emailvalue === '') {
         setErrorFor(emailvalue);
-    } else if (numbervalue === '') {
+    } else if ((numbervalue === '') || (typeof.numbervalue !=== number)) {
         setErrorFor(number);
     } else if (datevalue === '') {
         setErrorFor(date);
@@ -68,34 +70,34 @@ function checkInputs() {
 
 
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
+// form.addEventListener('submit', function (e) {
+//     e.preventDefault();
 
-    let name = document.getElementById('name').value
-    let email = document.getElementById('email').value
-    let number = document.getElementById('phone').value
-    let dateOfbirth = document.getElementById('date').value
+//     let name = document.getElementById('name').value
+//     let email = document.getElementById('email').value
+//     let number = document.getElementById('phone').value
+//     let dateOfbirth = document.getElementById('date').value
 
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        body: JSON.stringify({
-            username: name,
-            emailofUser: email,
-            numberOfUser: Number(number),
-            userbirthdate: dateOfbirth
-        }),
-        headers: {
-            "Content-Type": "application/json; charset = UTF-8"
-        }
-    })
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (data) {
-            console.log(data)
-        })
+//     fetch("https://jsonplaceholder.typicode.com/posts", {
+//         method: "POST",
+//         body: JSON.stringify({
+//             username: name,
+//             emailofUser: email,
+//             numberOfUser: Number(number),
+//             userbirthdate: dateOfbirth
+//         }),
+//         headers: {
+//             "Content-Type": "application/json; charset = UTF-8"
+//         }
+//     })
+//         .then(function (response) {
+//             return response.json()
+//         })
+//         .then(function (data) {
+//             console.log(data)
+//         })
 
-})
+// })
 
 
 
@@ -118,6 +120,19 @@ function myfunc(event) {
     localStorage.setItem('name', usernamevalue);
     localStorage.setItem('number', numbervalue);
     localStorage.setItem('email', emailvalue);
+}
+if () {
+    document.getElementById('name').value = localStorage.getItem('name');
+}
+
+
+
+window.onload = function () {
+    if (typeof (Storage) != 'undefined') {
+        document.getElementById('name').value = localStorage.getItem('name');
+        document.getElementById('email').value = localStorage.getItem('email');
+        document.getElementById('phone').value = localStorage.getItem('number');
+    }
 }
 
 

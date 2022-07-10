@@ -33,8 +33,17 @@ html {
     margin-left: 4.8rem;
 }
 
-.leftside {
+.formSide {
+    width: 99.7rem;
+}
+
+.leftSide {
     width: 92.3rem;
+}
+
+.leftSideImg {
+    width: 92.3rem;
+    height: 108rem;
 }
 
 
