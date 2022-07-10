@@ -1,4 +1,4 @@
-const form = document.getElementById('form');
+// const form = document.getElementById('form');
 const username = document.getElementById('name');
 const emailof = document.getElementById('email');
 const number = document.getElementById('phone');
@@ -9,6 +9,30 @@ const showAccordion = document.querySelector('.accordeon');
 const showSecondAccordion = document.querySelector('.accordeon2')
 const showGamers = document.querySelector('.gamers');
 
+
+
+
+
+
+const myForm = document.getElementById('forma');
+
+myForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch('https://jsonplaceholder.typicode.com/todos', {
+        method: 'POST',
+        body: formData,
+        headers: application / json
+    }).then(function (response) {
+        return response.text();
+    }).then(function (text) {
+        console.log(text);
+    }).catch(function (error) {
+        console.error(error);
+    })
+});
 
 
 
@@ -31,37 +55,58 @@ btnacc.addEventListener('click', function () {
 });
 
 
-// function checkInputs() {
-//     // get the value from inputs
-//     const usernamevalue = username.value.trim();
-//     const emailvalue = email.value.trim();
-//     const numbervalue = Number(number.value.trim());
-//     const datevalue = date.value;
+window.onload = function () {
 
-//     function setErrorFor(input) {
-//         document.querySelector('.errorMessagename').style.visibility = "visible";
-//         document.getElementById('name').style.backgroundColor = "#ffefef";
+    if (sessionStorage.getItem('name') == 'name') {
+        return;
+    }
 
-//     }
+    let username = sessionStorage.getItem('name');
+    if (username !== null) $('#inputName').val(username);
 
+    let emailofuser = sessionStorage.getItem('email');
+    if (emailof !== null) $('#inputEmail').val(emailof);
 
-//     if (usernamevalue === '') {
-//         //show error
-//         //add error class
-//         setErrorFor(username);
-//     } else if (emailvalue === '') {
-//         setErrorFor(emailvalue);
-//     } else if ((numbervalue === '') || (typeof.numbervalue !=== number)) {
-//         setErrorFor(number);
-//     } else if (datevalue === '') {
-//         setErrorFor(date);
-//     } else {
-//         setSuccessFor(username);
-
-//     }
-// }
+    let usernumber = sessionStorage.getItem('phone');
+    if (usernumber !== null) $('#inputNumber').val(usernumber);
+}
 
 
+window.onbeforeunload = function () {
+    sessionStorage.setItem('username', $('#inputName').val());
+    sessionStorage.setItem('emailofuser', $('#inputEmail').val());
+    sessionStorage.setItem('usernumber', $('#inputNumber').val());
+}
+
+function checkInputs() {
+    // get the value from inputs
+    const usernamevalue = username.value.trim();
+    const emailvalue = email.value.trim();
+    const numbervalue = Number(number.value.trim());
+    const datevalue = date.value;
+
+    function setErrorFor(input) {
+        document.querySelector('.errorMessagename').style.visibility = "visible";
+        document.getElementById('name').style.backgroundColor = "#ffefef";
+
+    }
+
+
+    if (usernamevalue === '') {
+        //show error
+        //add error class
+        setErrorFor(username);
+    } else if (emailvalue === '') {
+        setErrorFor(emailvalue);
+    } else if ((numbervalue === '') || (typeof.numbervalue !=== number)) {
+        setErrorFor(number);
+    } else if (datevalue === '') {
+        setErrorFor(date);
+    } else {
+        setSuccessFor(username);
+
+    }
+}
 
 
 
@@ -70,34 +115,36 @@ btnacc.addEventListener('click', function () {
 
 
 
-// form.addEventListener('submit', function (e) {
-//     e.preventDefault();
+const myForm = document.getElementById('form');
 
-//     let name = document.getElementById('name').value
-//     let email = document.getElementById('email').value
-//     let number = document.getElementById('phone').value
-//     let dateOfbirth = document.getElementById('date').value
+myForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-//     fetch("https://jsonplaceholder.typicode.com/posts", {
-//         method: "POST",
-//         body: JSON.stringify({
-//             username: name,
-//             emailofUser: email,
-//             numberOfUser: Number(number),
-//             userbirthdate: dateOfbirth
-//         }),
-//         headers: {
-//             "Content-Type": "application/json; charset = UTF-8"
-//         }
-//     })
-//         .then(function (response) {
-//             return response.json()
-//         })
-//         .then(function (data) {
-//             console.log(data)
-//         })
+    let name = document.getElementById('name').value();
+    let email = document.getElementById('email').value();
+    let number = document.getElementById('phone').value();
+    let dateOfbirth = document.getElementById('date').value();
 
-// })
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify({
+            username: name,
+            emailofUser: email,
+            numberOfUser: Number(number),
+            userbirthdate: dateOfbirth
+        }),
+        headers: {
+            "Content-Type": "application/json; charset = UTF-8"
+        }
+    })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data)
+        })
+
+})
 
 
 
@@ -137,27 +184,25 @@ btnacc.addEventListener('click', function () {
 
 
 async function getResponse() {
-    let response = await fetch('https://jsonplaceholder.typicode.com/photos')
-    let content = await response.json()
-    content = content.splice(0, 5);
+    let response = await fetch('https://chess-tournament-api.devtest.ge/api/grandmasters');
+    let content = await response.json();
 
     let list = document.querySelector('.post');
-
 
     let key;
 
     for (key in content) {
 
-        list.innerHTML += `    
+        list.innerHTML += `
     <li class='post'>
-    <h4>${content[key].title}</h4 >
-            <img src='${content[key].url}' class='imgOfgamers'></img>
+    <h4>${content[key].name}</h4 >
+            <img src='https://chess-tournament-api.devtest.ge/${content[key].image}' class='imgOfgamers'></img>
 </li > `
 
         content[key]
     }
 
-}
+};
 
 
 
