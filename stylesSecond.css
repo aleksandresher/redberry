@@ -87,7 +87,6 @@ html {
 }
 
 .headingfirst {
-    width: 21.5rem;
     height: 8.4rem;
     font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
@@ -98,6 +97,7 @@ html {
     margin-bottom: 3rem;
     border-bottom: 1px solid rgba(185, 180, 196, 0.3);
 }
+
 
 .secondMonitor {
     display: flex;
@@ -290,7 +290,7 @@ html {
 .error {
     position: absolute;
     top: 45rem;
-    left: 167rem;
+    left: 104rem;
     width: 1rem;
     height: 1rem;
 }
@@ -360,4 +360,41 @@ html {
     font-size: 1.6rem;
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
+}
+
+.startBtn {
+    display: flex;
+    width: 12.8rem;
+    height: 5.3rem;
+    position: absolute;
+    left: 101rem;
+    top: 60.1rem;
+    background-color: #212529;
+    border-radius: 0.8rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btnText {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    width: 107rem;
+    height: 2.7rem;
+    margin-bottom: 1.3rem;
+    margin-top: 1.3rem;
+    margin-left: 2.4rem;
+    text-transform: capitalize;
+
+}
+
+.arrowBtn {
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 2rem;
+    margin-top: 0.4rem;
+
 }

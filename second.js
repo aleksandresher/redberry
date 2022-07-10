@@ -31,35 +31,35 @@ btnacc.addEventListener('click', function () {
 });
 
 
-function checkInputs() {
-    // get the value from inputs
-    const usernamevalue = username.value.trim();
-    const emailvalue = email.value.trim();
-    const numbervalue = Number(number.value.trim());
-    const datevalue = date.value;
+// function checkInputs() {
+//     // get the value from inputs
+//     const usernamevalue = username.value.trim();
+//     const emailvalue = email.value.trim();
+//     const numbervalue = Number(number.value.trim());
+//     const datevalue = date.value;
 
-    function setErrorFor(input) {
-        document.querySelector('.errorMessagename').style.visibility = "visible";
-        document.getElementById('name').style.backgroundColor = "#ffefef";
+//     function setErrorFor(input) {
+//         document.querySelector('.errorMessagename').style.visibility = "visible";
+//         document.getElementById('name').style.backgroundColor = "#ffefef";
 
-    }
+//     }
 
 
-    if (usernamevalue === '') {
-        //show error
-        //add error class
-        setErrorFor(username);
-    } else if (emailvalue === '') {
-        setErrorFor(emailvalue);
-    } else if ((numbervalue === '') || (typeof.numbervalue !=== number)) {
-        setErrorFor(number);
-    } else if (datevalue === '') {
-        setErrorFor(date);
-    } else {
-        setSuccessFor(username);
+//     if (usernamevalue === '') {
+//         //show error
+//         //add error class
+//         setErrorFor(username);
+//     } else if (emailvalue === '') {
+//         setErrorFor(emailvalue);
+//     } else if ((numbervalue === '') || (typeof.numbervalue !=== number)) {
+//         setErrorFor(number);
+//     } else if (datevalue === '') {
+//         setErrorFor(date);
+//     } else {
+//         setSuccessFor(username);
 
-    }
-}
+//     }
+// }
 
 
 
@@ -109,31 +109,31 @@ function checkInputs() {
 
 
 
-function myfunc(event) {
-    event.preventDefault();
+// function myfunc(event) {
+//     event.preventDefault();
 
-    let usernamevalue = username.value.trim();
-    let emailvalue = email.value.trim();
-    let numbervalue = number.value.trim();
-    let datevalue = date.value;
+//     let usernamevalue = username.value.trim();
+//     let emailvalue = email.value.trim();
+//     let numbervalue = number.value.trim();
+//     let datevalue = date.value;
 
-    localStorage.setItem('name', usernamevalue);
-    localStorage.setItem('number', numbervalue);
-    localStorage.setItem('email', emailvalue);
-}
-if () {
-    document.getElementById('name').value = localStorage.getItem('name');
-}
+//     localStorage.setItem('name', usernamevalue);
+//     localStorage.setItem('number', numbervalue);
+//     localStorage.setItem('email', emailvalue);
+// }
+// if () {
+//     document.getElementById('name').value = localStorage.getItem('name');
+// }
 
 
 
-window.onload = function () {
-    if (typeof (Storage) != 'undefined') {
-        document.getElementById('name').value = localStorage.getItem('name');
-        document.getElementById('email').value = localStorage.getItem('email');
-        document.getElementById('phone').value = localStorage.getItem('number');
-    }
-}
+// window.onload = function () {
+//     if (typeof (Storage) != 'undefined') {
+//         document.getElementById('name').value = localStorage.getItem('name');
+//         document.getElementById('email').value = localStorage.getItem('email');
+//         document.getElementById('phone').value = localStorage.getItem('number');
+//     }
+// }
 
 
 async function getResponse() {
@@ -162,14 +162,26 @@ async function getResponse() {
 
 
 
-window.onbeforeunload = function () {
-    localStorage.setItem(savedusername, username.value());
-    localStorage.setItem(savedemail, emailof.value());
-    localStorage.setItem(savednumber, number.value());
-}
+// window.onbeforeunload = function () {
+//     localStorage.setItem(savedusername, username.value());
+//     localStorage.setItem(savedemail, emailof.value());
+//     localStorage.setItem(savednumber, number.value());
+// }
 
-window.onload = function () {
-    let username = localStorage.getItem(savedusername);
-    let email = localStorage.getItem(savedemail);
-    let number = localStorage.getItem(savednumber);
-}
+// window.onload = function () {
+//     let username = localStorage.getItem(savedusername);
+//     let email = localStorage.getItem(savedemail);
+//     let number = localStorage.getItem(savednumber);
+// }
+
+
+
+
+/* 
+check if email match redberry.com
+
+const str = document.getElementById('email').value;
+const newstr =str.slice(-12);
+if(newstr ==='redberry.com){
+
+*/

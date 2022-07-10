@@ -24,7 +24,10 @@
         </div>
 
         <div class="formSide">
-            <p class="headingfirst">Start Creating Your Account</p>
+            <div>
+                <p class="headingfirst">Start Creating Your Account</p>
+            </div>
+
             <div class="monitor">
                 <p class="progressNumber1">1</p>
                 <p class="progressNumber2">2</p>
@@ -41,7 +44,7 @@
             <form class="form" id="form" onsubmit="myfunc(event)">
                 <div class="form-control errormain successmain">
                     <input type="text" placeholder="Name" id="name">
-                    <img id="error" src="medical.png">
+                    <img class="error" src="medical.png">
                     <img class="success successmark" src="check.png">
 
                 </div>
@@ -64,10 +67,12 @@
 
                 </div>
                 <div class="nextBackBtn">
-                    <p class="back">Back</p>
-                    <div class="next">
-                        <input type="submit" value="Next">
-                        <img class="nextBtn" src="download.png">
+                    <div class="btnText">
+                        <p class="back">Back</p>
+                    </div>
+                    <div class="startBtn">
+                        <h class="btnText">Next</h>
+                        <p><a href='second.html'><img class="arrowBtn" src="final.png"></a></p>
                     </div>
             </form>
         </div>
