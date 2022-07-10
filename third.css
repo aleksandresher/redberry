@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
 * {
     padding: 0;
@@ -383,4 +384,34 @@ button.professional:hover {
     margin-right: 2rem;
     margin-top: 0.4rem;
 
+}
+
+.quote3 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 23rem;
+    left: 14rem;
+    gap: 1rem;
+}
+
+.subtext1,
+.subtext2 {
+    color: #212529;
+    font-size: 2.6rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.subtext3 {
+    font-size: 2.4rem;
+    align-self: flex-end;
+
+    color: rgba(9, 63, 104, 1);
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-style: italic;
+    text-transform: uppercase;
 }
